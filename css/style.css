@@ -757,24 +757,32 @@ html {
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%) translateY(-100px);
+    transform: translate(-50%, -120px);
     background-color: var(--green);
     color: #000000;
     border: var(--border-width) solid var(--border-color);
     box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
     border-radius: 16px;
-    padding: 16px 32px;
+    padding: 12px 24px;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     z-index: 2000;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
+    max-width: 90vw;
+    width: max-content;
+    text-align: center;
+}
+
+.comic-alert i {
+    flex-shrink: 0;
 }
 
 .comic-alert.active {
-    transform: translateX(-50%) translateY(30px);
+    transform: translate(-50%, 30px);
 }
 
 .footer-tag {
@@ -947,6 +955,13 @@ html {
     .modal-img-wrapper {
         height: 120px;
         padding: 8px;
+    }
+
+    .comic-alert {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        border-radius: 12px;
+        width: 90%;
     }
 }
 
