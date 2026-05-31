@@ -1,7 +1,7 @@
 /* ==========================================================================
    CARTOON & NEO-BRUTALISM STYLE SHEET
    Project: Creative Cartoon Portfolio
-   Author: Minh Panda
+   Author: Tran Viet Anh
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -328,13 +328,13 @@ html {
 }
 
 .hero-name {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 8vw, 3.5rem); /* Clamp for fluid responsive scaling */
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 16px;
     color: var(--text-color);
     text-transform: uppercase;
-    text-shadow: 4px 4px 0px var(--yellow), 8px 8px 0px var(--border-color);
+    text-shadow: 3px 3px 0px var(--yellow), 7px 7px 0px var(--border-color);
 }
 
 .hero-badges {
@@ -846,7 +846,7 @@ html {
 }
 
 /* --------------------------------------------------------------------------
-   13. SCREEN SIZE RESPONSIVENESS
+   13. SCREEN SIZE RESPONSIVENESS (MOBILE FIRST REFINEMENTS)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     :root {
@@ -858,9 +858,39 @@ html {
         background-size: 20px 20px;
     }
 
-    .hero-name {
-        font-size: 2.4rem;
-        text-shadow: 3px 3px 0px var(--yellow), 5px 5px 0px var(--border-color);
+    /* Container padding adjustment to maximize content width */
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        padding: 6px 12px;
+        box-shadow: 3px 3px 0px var(--shadow-color);
+    }
+
+    /* Fix project grid overflow layout on narrow screens */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-img-wrapper {
+        height: 180px;
+    }
+
+    .avatar-card {
+        width: 140px;
+        height: 140px;
+    }
+
+    .speech-bubble {
+        padding: 20px;
+        border-radius: 16px;
     }
 
     .about-text {
@@ -872,26 +902,72 @@ html {
         padding: 10px 20px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    /* Skill pill sizing adjustments to fit more tags */
+    .skill-pill {
+        font-size: 1rem;
+        padding: 8px 16px;
+        box-shadow: 4px 4px 0px var(--shadow-color);
     }
 
-    .avatar-card {
-        width: 140px;
-        height: 140px;
+    /* Social buttons spacing */
+    .social-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+        box-shadow: 4px 4px 0px var(--shadow-color);
     }
-    
+
+    /* Contact box padding */
+    .contact-box {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    /* Modal responsiveness: prevent close button clipping and align center */
     .modal-content {
-        padding: 24px;
+        padding: 20px;
         gap: 12px;
+        border-radius: 16px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        box-shadow: 2px 2px 0px var(--shadow-color);
     }
 
     .modal-title {
         font-size: 1.4rem;
+        padding-right: 25px; /* Leave space for the close button inside modal */
     }
 
     .modal-img-wrapper {
         height: 120px;
+        padding: 8px;
+    }
+}
+
+/* Extra optimization for very small screens (portrait viewport < 480px) */
+@media (max-width: 480px) {
+    /* Hide theme toggle text to prevent navbar overlap */
+    #theme-text {
+        display: none;
+    }
+    
+    .theme-toggle-btn {
+        padding: 8px 12px;
+    }
+    
+    .hero-name {
+        margin-top: 10px;
+    }
+
+    .hero-badges .badge {
+        font-size: 0.9rem;
+        padding: 6px 12px;
     }
 }
 
