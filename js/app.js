@@ -123,28 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     const projectData = {
         'cat-coder': {
-            title: 'Mèo Coder AI Helper 🐱',
+            title: 'Trợ Lý Nuôi Boss (CatCare) 🐱',
             accentColor: 'var(--pink)',
-            desc: 'Trợ lý AI siêu ngộ nghĩnh giúp bạn giao tiếp và hiểu tâm lý của Boss Mèo.',
-            longDesc: 'Dự án kết hợp giữa công nghệ xử lý ngôn ngữ tự nhiên hiện đại và tình yêu động vật! Ứng dụng tích hợp mô hình ngôn ngữ lớn để mô phỏng khả năng dịch tiếng "meo meo" cực dí dỏm, tư vấn công thức làm pate tại nhà tốt cho tiêu hóa của mèo, tự động lên lịch báo giờ cơm cho các bé, và đi kèm một kho truyện hài hước về các hoàng thượng siêu hài.',
-            tags: ['OpenAI API', 'Vanilla JS', 'CSS Grid', 'Lottie Files'],
-            link: 'https://github.com'
+            desc: 'Ứng dụng Android viết bằng Kotlin & Jetpack Compose giúp nhắc nhở lịch chăm sóc và giải mã tiếng kêu của mèo cưng.',
+            longDesc: 'Ứng dụng di động tối ưu dành riêng cho các "con sen"! Được xây dựng hoàn toàn bằng Kotlin và Jetpack Compose theo kiến trúc Clean Architecture mã nguồn mở. Ứng dụng tích hợp mô hình AI dịch tiếng "meo meo" cực dí dỏm, quản lý chi tiết lịch tiêm phòng, theo dõi chế độ dinh dưỡng hàng ngày, gửi thông báo nhắc nhở giờ cho ăn thông qua WorkManager, và gợi ý thực đơn pate tốt nhất cho sức khỏe boss mèo.',
+            tags: ['Kotlin', 'Jetpack Compose', 'OpenAI API', 'Clean Architecture'],
+            link: 'https://github.com/tranvietanh55/web-test'
         },
         'street-food': {
-            title: 'Bản Đồ Ăn Vặt Hà Nội 🍟',
+            title: 'Bản Đồ Ăn Vặt (YumMap) 🍟',
             accentColor: 'var(--green)',
-            desc: 'Bản đồ tương tác giúp bạn tìm kiếm các địa điểm ăn vặt vỉa hè ngon rẻ nhất Hà Nội.',
-            longDesc: 'Giải pháp tuyệt vời cho câu hỏi kinh điển "Hôm nay ăn gì?". Ứng dụng sử dụng thư viện bản đồ tương tác LeafletJS kết hợp dữ liệu do cộng đồng đóng góp để hiển thị các quán nem chua rán, bánh tráng trộn, trà chanh, nộm bò khô cực chi tiết. Tích hợp tính năng Vòng Quay May Mắn giúp giải quyết nhanh gọn những cuộc tranh cãi khi lựa chọn món ăn của nhóm bạn thân!',
-            tags: ['LeafletJS', 'CSS Flexbox', 'JSON API', 'GeoJSON'],
-            link: 'https://github.com'
+            desc: 'Ứng dụng tìm kiếm các thiên đường ẩm thực đường phố tại Hà Nội bằng Google Maps SDK, tích hợp lọc quán theo vị trí.',
+            longDesc: 'Bản đồ ăn vặt tương tác giúp giải cứu những tâm hồn đói bụng! Dự án tích hợp Google Maps SDK để hiển thị hàng trăm địa điểm ăn ngon-bổ-rẻ tại Hà Nội. Người dùng có thể tìm kiếm quán ăn xung quanh, xem đánh giá chi tiết, lọc địa điểm theo giá cả và khoảng cách. Ngoài ra ứng dụng còn có vòng xoay may mắn "Hôm nay ăn gì" để lựa chọn món ăn ngẫu nhiên.',
+            tags: ['Android SDK', 'Google Maps API', 'Retrofit', 'MVVM'],
+            link: 'https://github.com/tranvietanh55/web-test'
         },
         'cute-plant': {
-            title: 'Nhật Ký Cây Xanh 🌱',
+            title: 'Nhật Ký Cây Xanh (SproutLog) 🌱',
             accentColor: 'var(--purple)',
-            desc: 'Ứng dụng chăm sóc cây cảnh văn phòng, nhắc nhở tưới nước siêu thú vị.',
-            longDesc: 'Vũ khí sinh tồn của những "bé sen" yêu cây cỏ nhưng thường xuyên quên tưới nước. Ứng dụng cho phép thiết lập hồ sơ riêng cho từng chậu cây trong nhà, tự động tính toán tần suất tưới nước dựa trên loại đất và điều kiện thời tiết thực tế, hiển thị biểu đồ sinh trưởng ngộ nghĩnh và gửi thông báo nhắc nhở mang phong cách khuyên nhủ siêu đáng yêu của các loài cây cảnh.',
-            tags: ['LocalStorage', 'SVG Animation', 'PWA', 'Vanilla CSS'],
-            link: 'https://github.com'
+            desc: 'Ứng dụng quản lý lịch tưới cây cảnh, tự động chạy tác vụ gửi thông báo nhắc nhở thông qua WorkManager nền.',
+            longDesc: 'Giải pháp tuyệt vời để chăm sóc cây cảnh trong nhà! Ứng dụng giúp bạn tạo hồ sơ riêng cho từng loài thực vật, theo dõi tần suất tưới nước và bón phân, tính toán lượng nước dựa vào độ ẩm và nhiệt độ không khí thực tế. Cơ sở dữ liệu được quản lý bằng Room Database và chạy ngầm gửi thông báo nhắc nhở bằng WorkManager chính xác từng phút.',
+            tags: ['Room Database', 'WorkManager', 'Kotlin Flow', 'Material Design 3'],
+            link: 'https://github.com/tranvietanh55/web-test'
         }
     };
 
