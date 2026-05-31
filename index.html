@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Minh Panda | Cartoon Creative Portfolio</title>
+    <meta name="description" content="Trang web Thông tin cá nhân độc đáo mang đậm phong cách Hoạt hình và Neo-Brutalism của Minh Panda. Sáng tạo, độc đáo và đầy màu sắc!">
+    <meta name="keywords" content="Portfolio, Cartoon style, Neo-Brutalism, Front-end Developer, UI/UX Designer, Minh Panda">
+    <meta name="author" content="Minh Panda">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Minh Panda | Cartoon Creative Portfolio">
+    <meta property="og:description" content="Trang web Thông tin cá nhân độc đáo mang đậm phong cách Hoạt hình và Neo-Brutalism của Minh Panda.">
+    <meta property="og:type" content="website">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Fredoka for rounded thick comic style font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Modularized Style Sheet Link -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Modularized Interactive Application Script -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">PANDADEV 🐼</a>
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Đổi giao diện">
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-text">Chế độ tối</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Header / Hero Section -->
+        <section class="hero reveal">
+            <!-- Dynamic avatar structure -->
+            <div class="avatar-card">
+                <span class="crown-sticker">👑</span>
+                <img src="https://api.dicebear.com/7.x/micah/svg?seed=Felix" id="avatar" class="avatar-img" alt="Ảnh Đại Diện Hoạt Hình">
+            </div>
+            <!-- Interactive randomize seed -->
+            <button class="randomize-btn" id="randomize-avatar">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Đổi Diện Mạo!
+            </button>
+
+            <!-- Prominent Cartoon Name -->
+            <h1 class="hero-name">MINH PANDA</h1>
+
+            <!-- Professional / Hobbies tags -->
+            <div class="hero-badges">
+                <span class="badge" style="--badge-bg: var(--yellow)"><i class="fa-solid fa-code"></i> Front-End Dev</span>
+                <span class="badge" style="--badge-bg: var(--pink)"><i class="fa-solid fa-palette"></i> UI/UX Designer</span>
+                <span class="badge" style="--badge-bg: var(--purple)"><i class="fa-solid fa-gamepad"></i> Game Thủ Bán Chuyên</span>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-bubble-container reveal">
+            <div class="speech-bubble">
+                <p class="about-text">
+                    Chào bạn! Mình là một Lập trình viên Front-end kiêm Nhà thiết kế UI/UX theo phong cách sáng tạo và đầy màu sắc. Mình có đam mê biến những dòng code khô khan thành các trải nghiệm sinh động và vui nhộn. Phương châm làm việc của mình: "Nếu code không chạy, hãy đi uống trà sữa và thử lại!" 🥤
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="reveal">
+            <div class="section-header">
+                <h2 class="comic-title" style="--title-bg: var(--blue)">SIÊU NĂNG LỰC ⚡</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-pill" style="--pill-bg: var(--orange)"><i class="fa-brands fa-html5"></i> HTML5</div>
+                <div class="skill-pill" style="--pill-bg: var(--blue)"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                <div class="skill-pill" style="--pill-bg: var(--yellow)"><i class="fa-brands fa-js"></i> JavaScript</div>
+                <div class="skill-pill" style="--pill-bg: var(--green)"><i class="fa-brands fa-react"></i> ReactJS</div>
+                <div class="skill-pill" style="--pill-bg: var(--purple)"><i class="fa-brands fa-vuejs"></i> VueJS</div>
+                <div class="skill-pill" style="--pill-bg: var(--pink)"><i class="fa-brands fa-figma"></i> Figma UI/UX</div>
+                <div class="skill-pill" style="--pill-bg: var(--blue)"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
+                <div class="skill-pill" style="--pill-bg: var(--yellow)"><i class="fa-brands fa-github"></i> Git / Github</div>
+                <div class="skill-pill" style="--pill-bg: var(--purple)"><i class="fa-solid fa-pen-nib"></i> Vẽ Đồ Họa</div>
+                <div class="skill-pill" style="--pill-bg: var(--green)"><i class="fa-solid fa-gamepad"></i> Game Master</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="reveal">
+            <div class="section-header">
+                <h2 class="comic-title" style="--title-bg: var(--pink)">KHO BÁU DỰ ÁN 🏆</h2>
+            </div>
+            <div class="projects-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper" style="--card-accent: var(--pink)">
+                        <!-- Self-contained Cartoon SVG Illustration -->
+                        <svg class="project-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cat Head -->
+                            <rect x="30" y="50" width="140" height="110" rx="40" fill="#FFE0B2" stroke="#000" stroke-width="4"/>
+                            <!-- Ears -->
+                            <polygon points="30,60 10,10 70,50" fill="#FFE0B2" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <polygon points="170,60 190,10 130,50" fill="#FFE0B2" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- Inner Ears -->
+                            <polygon points="32,50 20,20 60,45" fill="#FF8E9E"/>
+                            <polygon points="168,50 180,20 140,45" fill="#FF8E9E"/>
+                            <!-- Glasses -->
+                            <rect x="45" y="85" width="45" height="35" rx="10" fill="none" stroke="#000" stroke-width="4"/>
+                            <rect x="110" y="85" width="45" height="35" rx="10" fill="none" stroke="#000" stroke-width="4"/>
+                            <line x1="90" y1="100" x2="110" y2="100" stroke="#000" stroke-width="4"/>
+                            <!-- Eyes -->
+                            <circle cx="67" cy="102" r="6" fill="#000"/>
+                            <circle cx="132" cy="102" r="6" fill="#000"/>
+                            <!-- Snout & Mouth -->
+                            <path d="M 92 125 Q 100 130 108 125 Q 116 130 124 125" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Whiskers -->
+                            <line x1="15" y1="115" x2="35" y2="118" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="15" y1="128" x2="35" y2="128" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="185" y1="115" x2="165" y2="118" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="185" y1="128" x2="165" y2="128" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mèo Coder AI Helper 🐱</h3>
+                        <p class="project-desc">Trợ lý AI siêu ngộ nghĩnh giúp giải mã tiếng "meo meo" của boss, gợi ý công thức bữa ăn hảo hạng và nhắc nhở cho ăn đúng giờ.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">OpenAI API</span>
+                            <span class="project-tag">Vanilla JS</span>
+                            <span class="project-tag">CSS Grid</span>
+                        </div>
+                        <button class="neo-btn btn-yellow project-btn" data-project="cat-coder">KHÁM PHÁ NGAY 🚀</button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper" style="--card-accent: var(--green)">
+                        <!-- Self-contained Cartoon SVG Illustration -->
+                        <svg class="project-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Fries Base Back -->
+                            <rect x="58" y="25" width="16" height="60" rx="5" fill="#FFDE4D" stroke="#000" stroke-width="4"/>
+                            <rect x="76" y="15" width="16" height="70" rx="5" fill="#FFDE4D" stroke="#000" stroke-width="4"/>
+                            <rect x="94" y="30" width="16" height="55" rx="5" fill="#FFDE4D" stroke="#000" stroke-width="4"/>
+                            <rect x="112" y="18" width="16" height="67" rx="5" fill="#FFDE4D" stroke="#000" stroke-width="4"/>
+                            <rect x="128" y="28" width="16" height="57" rx="5" fill="#FFDE4D" stroke="#000" stroke-width="4"/>
+                            <!-- Fry Box -->
+                            <polygon points="50,70 150,70 135,170 65,170" fill="#FF8E9E" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- White stripe on cup -->
+                            <rect x="75" y="70" width="50" height="100" fill="#FFF" stroke="#000" stroke-width="4"/>
+                            <!-- Smile in box -->
+                            <circle cx="92" cy="115" r="5" fill="#000"/>
+                            <circle cx="108" cy="115" r="5" fill="#000"/>
+                            <path d="M 94 128 Q 100 134 106 128" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Star sticker -->
+                            <polygon points="100,82 103,89 110,90 105,95 106,102 100,98 94,102 95,95 90,90 97,89" fill="#FFDE4D"/>
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Bản Đồ Ăn Vặt Hà Nội 🍟</h3>
+                        <p class="project-desc">Bản đồ tương tác định vị các thiên đường ăn vặt quanh Hà Nội. Tích hợp tính năng vòng quay may mắn "Hôm nay ăn gì?".</p>
+                        <div class="project-tags">
+                            <span class="project-tag">LeafletJS</span>
+                            <span class="project-tag">CSS Flexbox</span>
+                            <span class="project-tag">JSON API</span>
+                        </div>
+                        <button class="neo-btn btn-blue project-btn" data-project="street-food">GÀO PHÍM TÌM QUÁN 🎮</button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper" style="--card-accent: var(--purple)">
+                        <!-- Self-contained Cartoon SVG Illustration -->
+                        <svg class="project-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Leaves Center -->
+                            <path d="M 100,96 Q 100,50 85,30" fill="none" stroke="#000" stroke-width="4"/>
+                            <path d="M 100,80 Q 115,60 130,45" fill="none" stroke="#000" stroke-width="4"/>
+                            <!-- Leaf 1 Left -->
+                            <path d="M 85,30 Q 60,35 65,55 Q 85,55 85,30" fill="#ADF7B6" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- Leaf 2 Right -->
+                            <path d="M 130,45 Q 155,40 145,25 Q 125,30 130,45" fill="#ADF7B6" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- Leaf 3 Center Top -->
+                            <path d="M 100,55 Q 90,20 105,10 Q 115,30 100,55" fill="#ADF7B6" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- Pot -->
+                            <polygon points="60,105 140,105 130,170 70,170" fill="#FFC09F" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+                            <!-- Rim of the pot -->
+                            <rect x="52" y="93" width="96" height="15" rx="4" fill="#FFC09F" stroke="#000" stroke-width="4"/>
+                            <!-- Smile in pot -->
+                            <circle cx="88" cy="132" r="5" fill="#000"/>
+                            <circle cx="112" cy="132" r="5" fill="#000"/>
+                            <path d="M 94 144 Q 100 150 106 144" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Nhật Ký Cây Xanh 🌱</h3>
+                        <p class="project-desc">Ứng dụng theo dõi tình trạng sinh trưởng của cây cảnh văn phòng, lên lịch tưới cây và nhắc nhở bằng tin nhắn động lực siêu dễ thương.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">LocalStorage</span>
+                            <span class="project-tag">SVG Animation</span>
+                            <span class="project-tag">PWA</span>
+                        </div>
+                        <button class="neo-btn btn-orange project-btn" data-project="cute-plant">TƯỚI NƯỚC CHO CÂY 💦</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="reveal">
+            <div class="section-header">
+                <h2 class="comic-title" style="--title-bg: var(--purple)">GỬI THƯ CHO MÌNH ✉️</h2>
+            </div>
+            
+            <div class="contact-box">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Tên của bạn là gì? 👾</label>
+                        <input type="text" id="name" class="form-input" placeholder="Ví dụ: Đại Hiệp Ẩn Danh..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Địa chỉ hòm thư điện tử? 📧</label>
+                        <input type="email" id="email" class="form-input" placeholder="Ví dụ: daihiep@gmail.com..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Lời nhắn gửi vũ trụ? 🌌</label>
+                        <textarea id="message" class="form-textarea" placeholder="Chào Minh, mình muốn kết nối để làm một dự án siêu hoành tráng..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="neo-btn btn-pink" style="margin-top: 10px;">
+                        PHÓNG TIN NHẮN ĐI! <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social Links -->
+            <div class="socials-grid">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn social-facebook" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn social-github" aria-label="Github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:contact@example.com" class="social-btn social-email" aria-label="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn social-instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Fun Interactive Footer Tag -->
+        <footer class="footer-tag">
+            <div class="footer-box" style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <span>Thiết kế bởi 🖤 Minh Panda | © 2026</span>
+                <!-- Interactive Button to view LocalStorage messages -->
+                <button class="neo-btn btn-purple" onclick="toggleAdminPanel()" style="font-size: 0.85rem; padding: 6px 14px; border-radius: 8px; box-shadow: 3px 3px 0px var(--shadow-color);">
+                    🔑 Xem Hộp Thư Đã Nhận
+                </button>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Custom Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-close" id="modal-close-btn">&times;</div>
+            <div class="modal-img-wrapper" id="modal-img-container">
+                <!-- SVG illustration cloned and injected dynamically here -->
+            </div>
+            <h3 class="modal-title" id="modal-project-title">Tên dự án</h3>
+            <p class="modal-desc" id="modal-project-desc">Mô tả ngắn của dự án ở đây.</p>
+            <div id="modal-project-long-desc" style="line-height: 1.6; font-size: 1rem; opacity: 0.9;">
+                Mô tả chi tiết dài hơn...
+            </div>
+            <div class="project-tags" id="modal-project-tags">
+                <!-- tags injected here -->
+            </div>
+            <div style="display: flex; gap: 12px; margin-top: 10px;">
+                <button class="neo-btn btn-green" style="flex: 1;" id="modal-action-btn">Ghé chơi thử! 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Message Dashboard Modal (LocalStorage database) -->
+    <div class="modal-overlay" id="admin-modal">
+        <div class="modal-content" style="max-width: 680px;">
+            <div class="modal-close" onclick="toggleAdminPanel()">&times;</div>
+            <h3 class="modal-title">📥 Hộp Thư Liên Hệ (Lưu trữ cục bộ)</h3>
+            <p style="margin-bottom: 12px; font-size: 0.95rem; opacity: 0.85;">Dữ liệu tin nhắn liên hệ được lưu trữ tạm thời trên bộ nhớ LocalStorage của trình duyệt này.</p>
+            <div id="messages-container" style="max-height: 350px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding-right: 8px;">
+                <!-- Dynamically loaded messages -->
+            </div>
+            <div style="display: flex; gap: 12px; margin-top: 12px;">
+                <button class="neo-btn btn-orange" onclick="clearMessages()" style="flex: 1; font-size: 0.95rem; padding: 10px 18px;">Xóa Toàn Bộ 🗑️</button>
+                <button class="neo-btn btn-blue" onclick="toggleAdminPanel()" style="flex: 1; font-size: 0.95rem; padding: 10px 18px;">Đóng Lại 🚪</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comic Alert Popup Notification -->
+    <div class="comic-alert" id="custom-alert">
+        <i class="fa-solid fa-circle-check" style="font-size: 1.5rem;"></i>
+        <span id="alert-message">Viuuu! Tin nhắn đã bay đi mất tiêu! ✉️</span>
+    </div>
+
+</body>
+</html>

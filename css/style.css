@@ -1,0 +1,911 @@
+/* ==========================================================================
+   CARTOON & NEO-BRUTALISM STYLE SHEET
+   Project: Creative Cartoon Portfolio
+   Author: Minh Panda
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN SYSTEM VARIABLES (THEME TOKENS)
+   -------------------------------------------------------------------------- */
+:root {
+    --bg-color: #FFFDF5;
+    --card-bg: #FFFFFF;
+    --text-color: #1A1A1A;
+    --border-color: #000000;
+    --shadow-color: #000000;
+    --grid-dot-color: rgba(0, 0, 0, 0.15);
+    
+    /* Cartoon Palette Colors */
+    --yellow: #FFDE4D;
+    --pink: #FF8E9E;
+    --blue: #8ECAE6;
+    --purple: #D6C7FF;
+    --green: #ADF7B6;
+    --orange: #FFC09F;
+    
+    --border-width: 4px;
+    --border-width-sm: 3px;
+    --shadow-size: 8px;
+    --shadow-size-sm: 5px;
+    --font-main: 'Fredoka', sans-serif;
+}
+
+/* Dark Mode Tokens Override */
+[data-theme="dark"] {
+    --bg-color: #16161A;
+    --card-bg: #24252D;
+    --text-color: #FFFFF0;
+    --grid-dot-color: rgba(255, 255, 255, 0.1);
+    
+    --yellow: #FFE359;
+    --pink: #FF7088;
+    --blue: #5EBBE5;
+    --purple: #B29CFF;
+    --green: #8BEB99;
+    --orange: #FFA375;
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE STYLING
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: radial-gradient(var(--grid-dot-color) 2px, transparent 2px);
+    background-size: 24px 24px;
+    font-family: var(--font-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-left: var(--border-width) solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   3. NAVIGATION BAR
+   -------------------------------------------------------------------------- */
+.navbar {
+    background-color: var(--pink);
+    border-bottom: var(--border-width) solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    padding: 8px 18px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 40px;
+    box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px var(--shadow-color);
+    display: inline-block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.logo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background-color: var(--yellow);
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px var(--shadow-color);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none;
+    color: #000000;
+}
+
+.theme-toggle-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--shadow-color);
+}
+
+.theme-toggle-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+/* --------------------------------------------------------------------------
+   4. NEO-BRUTALISM COMPONENT STYLES
+   -------------------------------------------------------------------------- */
+/* Main Button Class */
+.neo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--btn-bg, var(--yellow));
+    color: #000000;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    border-radius: 16px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s ease;
+    text-decoration: none;
+    user-select: none;
+}
+
+.neo-btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--shadow-color);
+}
+
+.neo-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+/* Button Color modifiers */
+.btn-blue { --btn-bg: var(--blue); }
+.btn-pink { --btn-bg: var(--pink); }
+.btn-purple { --btn-bg: var(--purple); }
+.btn-green { --btn-bg: var(--green); }
+.btn-orange { --btn-bg: var(--orange); }
+
+/* Comic Headers */
+.section-header {
+    text-align: center;
+    margin: 60px 0 40px 0;
+}
+
+.comic-title {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #000000;
+    background-color: var(--title-bg, var(--yellow));
+    border: var(--border-width) solid var(--border-color);
+    padding: 12px 28px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    transform: rotate(-1.5deg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #000000;
+    background-color: var(--badge-bg, var(--blue));
+    border: var(--border-width-sm) solid var(--border-color);
+    border-radius: 40px;
+    box-shadow: 4px 4px 0px var(--shadow-color);
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* --------------------------------------------------------------------------
+   5. PROFILE HERO & HEADER
+   -------------------------------------------------------------------------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.avatar-card {
+    position: relative;
+    background-color: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    margin-bottom: 24px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.avatar-card:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.avatar-img {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background-color: var(--purple);
+    border: var(--border-width-sm) solid var(--border-color);
+    object-fit: cover;
+}
+
+.crown-sticker {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 2.5rem;
+    transform: rotate(20deg);
+    animation: floatSticker 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatSticker {
+    0% { transform: rotate(15deg) translateY(0); }
+    100% { transform: rotate(25deg) translateY(-8px); }
+}
+
+.randomize-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: var(--orange);
+    border: var(--border-width-sm) solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--shadow-color);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none;
+    color: #000000;
+}
+
+.randomize-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px var(--shadow-color);
+}
+
+.randomize-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--shadow-color);
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px var(--yellow), 8px 8px 0px var(--border-color);
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   6. ABOUT ME (SPEECH BUBBLE COMIC BOX)
+   -------------------------------------------------------------------------- */
+.about-bubble-container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 50px auto;
+}
+
+.speech-bubble {
+    position: relative;
+    background: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    text-align: left;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 18px;
+    border-style: solid;
+    border-color: transparent transparent var(--border-color) transparent;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -5px;
+    border-width: 18px;
+    border-style: solid;
+    border-color: transparent transparent var(--card-bg) transparent;
+    z-index: 2;
+}
+
+.about-text {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* --------------------------------------------------------------------------
+   7. SKILLS (PILLS BADGES)
+   -------------------------------------------------------------------------- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000000;
+    background-color: var(--pill-bg, var(--yellow));
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 50px;
+    padding: 12px 24px;
+    box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px var(--shadow-color);
+    cursor: default;
+    user-select: none;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+
+.skill-pill:hover {
+    transform: translate(-3px, -3px) rotate(-2deg);
+    box-shadow: 8px 8px 0px var(--shadow-color);
+}
+
+/* --------------------------------------------------------------------------
+   8. PROJECTS / CARDS
+   -------------------------------------------------------------------------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 24px;
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 14px 14px 0px var(--shadow-color);
+}
+
+.project-img-wrapper {
+    background-color: var(--card-accent, var(--pink));
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 160px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover .project-svg {
+    transform: scale(1.15) rotate(3deg);
+}
+
+.project-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.project-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 12px;
+    box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px var(--shadow-color);
+    text-align: center;
+}
+
+.project-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--shadow-color);
+}
+
+.project-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+/* --------------------------------------------------------------------------
+   9. CONTACT FORM
+   -------------------------------------------------------------------------- */
+.contact-box {
+    background-color: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 24px;
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.form-input, .form-textarea {
+    font-family: var(--font-main);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 12px 16px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: var(--border-width-sm) solid var(--border-color);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: var(--yellow);
+    box-shadow: 4px 4px 0px var(--border-color);
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --------------------------------------------------------------------------
+   10. SOCIAL BUTTONS
+   -------------------------------------------------------------------------- */
+.socials-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.social-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--social-bg, var(--pink));
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px var(--shadow-color);
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s ease;
+}
+
+.social-btn:hover {
+    transform: translate(-4px, -4px) scale(1.05);
+    box-shadow: 8px 8px 0px var(--shadow-color);
+}
+
+.social-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+.social-facebook { --social-bg: var(--blue); }
+.social-github { --social-bg: var(--purple); }
+.social-email { --social-bg: var(--yellow); }
+.social-instagram { --social-bg: var(--orange); }
+
+/* --------------------------------------------------------------------------
+   11. MODAL DIALOGS
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 24px;
+    box-shadow: 12px 12px 0px var(--shadow-color);
+    max-width: 620px;
+    width: 90%;
+    padding: 32px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--pink);
+    color: #000000;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 50%;
+    box-shadow: 4px 4px 0px var(--shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none;
+}
+
+.modal-close:hover {
+    transform: scale(1.1) rotate(90deg);
+}
+
+.modal-close:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+.modal-img-wrapper {
+    background-color: var(--yellow);
+    border: var(--border-width-sm) solid var(--border-color);
+    border-radius: 16px;
+    padding: 16px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-img-wrapper svg {
+    max-height: 100%;
+    width: auto;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-color);
+}
+
+.modal-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* --------------------------------------------------------------------------
+   12. INTERACTIVE EFFECTS & FEEDBACKS
+   -------------------------------------------------------------------------- */
+/* Click Particle elements */
+.click-particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+    z-index: 9999;
+    animation: floatUp 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+/* Comic Popup alerts */
+.comic-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background-color: var(--green);
+    color: #000000;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-color);
+    border-radius: 16px;
+    padding: 16px 32px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    z-index: 2000;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comic-alert.active {
+    transform: translateX(-50%) translateY(30px);
+}
+
+.footer-tag {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-box {
+    display: inline-block;
+    background-color: var(--purple);
+    color: #000000;
+    border: var(--border-width-sm) solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px var(--shadow-color);
+    user-select: none;
+}
+
+/* LocalStorage inbox cards */
+.message-card {
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    position: relative;
+    transition: transform 0.15s ease;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.message-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.message-body {
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.message-delete-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: var(--pink);
+    border: 2px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.message-delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* --------------------------------------------------------------------------
+   13. SCREEN SIZE RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --border-width: 3px;
+        --shadow-size: 6px;
+    }
+
+    body {
+        background-size: 20px 20px;
+    }
+
+    .hero-name {
+        font-size: 2.4rem;
+        text-shadow: 3px 3px 0px var(--yellow), 5px 5px 0px var(--border-color);
+    }
+
+    .about-text {
+        font-size: 1.15rem;
+    }
+
+    .comic-title {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .avatar-card {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .modal-content {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+    }
+
+    .modal-img-wrapper {
+        height: 120px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   14. TRANSITION EFFECTS
+   -------------------------------------------------------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
